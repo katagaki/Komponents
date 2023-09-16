@@ -23,7 +23,7 @@ public struct ListSectionHeader: View {
     }
 
     public var body: some View {
-        Text(LocalizedStringKey(text))
+        Text(LocalizedStringKey(text), bundle: bundle)
             .fontWeight(.bold)
             .foregroundColor(.primary)
             .textCase(nil)
