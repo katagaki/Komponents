@@ -48,8 +48,8 @@ public struct MoreView<Content: View>: View {
                 Link(destination: URL(string: "https://github.com/katagaki/\(githubRepoName ?? "")")!) {
                     HStack {
                         ListRow(image: "ListIcon.GitHub",
-                                title: "More.Help.GitHub".replacingOccurrences(of: "%@", with: githubRepoName ?? ""),
-                                subtitle: "More.Help.GitHub.Subtitle",
+                                title: "More.Help.GitHub",
+                                subtitle: "More.Help.GitHub.Subtitle".replacingOccurrences(of: "%@", with: githubRepoName ?? ""),
                                 includeSpacer: true)
                         Image(systemName: "safari")
                             .opacity(0.5)
