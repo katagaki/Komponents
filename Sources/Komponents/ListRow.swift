@@ -61,15 +61,9 @@ public struct ListRow: View {
                         .font(.body)
                 }
                 if let subtitle = subtitle {
-                    if NSLocalizedString(subtitle, bundle: bundle, comment: "") == subtitle {
-                        Text(verbatim: subtitle)
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    } else {
-                        Text(LocalizedStringKey(subtitle), bundle: bundle)
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
+                    Text(verbatim: NSLocalizedString(subtitle, bundle: bundle, comment: ""))
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
             }
             if includeSpacer {
