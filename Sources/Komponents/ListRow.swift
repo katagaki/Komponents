@@ -47,7 +47,7 @@ public struct ListRow: View {
 
     public var body: some View {
         HStack(alignment: .center, spacing: 16.0) {
-            Image(image, bundle: .module)
+            Image(image, bundle: bundle)
                 .resizable()
                 .frame(width: 30.0, height: 30.0)
             VStack(alignment: .leading, spacing: 2.0) {
