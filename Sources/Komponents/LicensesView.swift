@@ -34,4 +34,9 @@ public struct LicensesView: View {
 public struct License {
     public var libraryName: String
     public var text: String
+
+    init(libraryName: String, text: String) {
+        self.libraryName = libraryName
+        self.text = text
+    }
 }
