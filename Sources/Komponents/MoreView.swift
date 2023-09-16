@@ -51,7 +51,7 @@ public struct MoreView<Content: View>: View {
                     HStack {
                         ListRow(image: "ListIcon.GitHub",
                                 title: "More.Help.GitHub",
-                                subtitle: "More.Help.GitHub.Subtitle".replacingOccurrences(of: "%@", with: githubRepoName ?? ""),
+                                subtitle: githubRepoName,
                                 includeSpacer: true,
                                 bundle: .module)
                         Image(systemName: "safari")

@@ -86,23 +86,6 @@
         }
       }
     },
-    "More.Help.GitHub.Subtitle" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "katagaki/%@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "katagaki/%@"
-          }
-        }
-      }
-    },
     "More.Help.Twitter" : {
       "extractionState" : "manual",
       "localizations" : {
