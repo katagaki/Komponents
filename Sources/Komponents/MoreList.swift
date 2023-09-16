@@ -1,5 +1,5 @@
 //
-//  MoreView.swift
+//  MoreList.swift
 //
 //
 //  Created by シン・ジャスティン on 2023/09/16.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct MoreView<Content: View>: View {
+public struct MoreList<Content: View>: View {
 
     @ViewBuilder let sections: Content
     var githubRepoName: String
