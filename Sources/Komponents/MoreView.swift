@@ -47,7 +47,7 @@ public struct MoreView<Content: View>: View {
                     }
                     .foregroundColor(.primary)
                 }
-                Link(destination: URL(string: "https://github.com/katagaki/\(githubRepoName)")!) {
+                Link(destination: URL(string: "https://github.com/\(githubRepoName)")!) {
                     HStack {
                         ListRow(image: "ListIcon.GitHub",
                                 title: "More.Help.GitHub",
