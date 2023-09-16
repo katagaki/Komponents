@@ -8,10 +8,19 @@
 import SwiftUI
 
 public struct ActionButton: View {
+
     public var text: String
     public var icon: String
     public var isPrimary: Bool = false
     public var action: () -> Void
+
+    public init(text: String, icon: String, isPrimary: Bool, action: @escaping () -> Void) {
+        self.text = text
+        self.icon = icon
+        self.isPrimary = isPrimary
+        self.action = action
+    }
+
     public var body: some View {
         if isPrimary {
             Button {

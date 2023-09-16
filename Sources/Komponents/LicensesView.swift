@@ -11,6 +11,10 @@ public struct LicensesView: View {
 
     @State public var licenses: [License]
 
+    public init(licenses: [License]) {
+        self.licenses = licenses
+    }
+
     public var body: some View {
         List(licenses, id: \.libraryName) { license in
             Section {

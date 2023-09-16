@@ -12,6 +12,11 @@ public struct LargeButtonLabel: View {
     @State public var iconName: String?
     @State public var text: String
 
+    public init(iconName: String? = nil, text: String) {
+        self.iconName = iconName
+        self.text = text
+    }
+
     public var body: some View {
         HStack(alignment: .center, spacing: 4.0) {
             if let iconName = iconName {

@@ -8,10 +8,24 @@
 import SwiftUI
 
 public struct ListRow: View {
+
     public var image: String
     public var title: String
     public var subtitle: String?
-    public var includeSpacer: Bool = false
+    public var includeSpacer: Bool
+
+    public init(image: String, title: String, subtitle: String? = nil, includeSpacer: Bool = false) {
+        self.image = image
+        self.title = title
+        self.subtitle = subtitle
+        self.includeSpacer = includeSpacer
+    }
+
+    public init(image: String, title: String) {
+        self.image = image
+        self.title = title
+        self.includeSpacer = false
+    }
 
     public var body: some View {
         HStack(alignment: .center, spacing: 16.0) {
