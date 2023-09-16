@@ -33,10 +33,10 @@ public struct ListRow: View {
                 .resizable()
                 .frame(width: 30.0, height: 30.0)
             VStack(alignment: .leading, spacing: 2.0) {
-                Text(NSLocalizedString(title, comment: ""))
+                Text(LocalizedStringKey(title), bundle: .module)
                     .font(.body)
                 if let subtitle = subtitle {
-                    Text(NSLocalizedString(subtitle, comment: ""))
+                    Text(LocalizedStringKey(subtitle), bundle: .module)
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
