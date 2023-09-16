@@ -53,12 +53,23 @@ public struct ListRow: View {
                 .resizable()
                 .frame(width: 30.0, height: 30.0)
             VStack(alignment: .leading, spacing: 2.0) {
-                Text(LocalizedStringKey(title))
-                    .font(.body)
+                if NSLocalizedString(title, bundle: bundle, comment: "") == title {
+                    Text(verbatim: title)
+                        .font(.body)
+                } else {
+                    Text(LocalizedStringKey(title), bundle: bundle)
+                        .font(.body)
+                }
                 if let subtitle = subtitle {
-                    Text(LocalizedStringKey(subtitle))
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                    if NSLocalizedString(subtitle, bundle: bundle, comment: "") == subtitle {
+                        Text(verbatim: subtitle)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    } else {
+                        Text(LocalizedStringKey(subtitle), bundle: bundle)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
             if includeSpacer {

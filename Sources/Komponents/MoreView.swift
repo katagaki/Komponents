@@ -26,8 +26,8 @@ public struct MoreView<Content: View>: View {
                 Link(destination: URL(string: "https://x.com/katagaki_")!) {
                     HStack {
                         ListRow(image: "ListIcon.Twitter",
-                                title: NSLocalizedString("More.Help.Twitter", bundle: .module, comment: ""),
-                                subtitle: NSLocalizedString("More.Help.Twitter.Subtitle", bundle: .module, comment: ""),
+                                title: "More.Help.Twitter",
+                                subtitle: "More.Help.Twitter.Subtitle",
                                 includeSpacer: true,
                                 bundle: .module)
                         Image(systemName: "safari")
@@ -38,8 +38,8 @@ public struct MoreView<Content: View>: View {
                 Link(destination: URL(string: "mailto:ktgk.public@icloud.com")!) {
                     HStack {
                         ListRow(image: "ListIcon.Email",
-                                title: NSLocalizedString("More.Help.Email", bundle: .module, comment: ""),
-                                subtitle: NSLocalizedString("More.Help.Email.Subtitle", bundle: .module, comment: ""),
+                                title: "More.Help.Email",
+                                subtitle: "More.Help.Email.Subtitle",
                                 includeSpacer: true,
                                 bundle: .module)
                         Image(systemName: "arrow.up.forward.app")
@@ -50,7 +50,7 @@ public struct MoreView<Content: View>: View {
                 Link(destination: URL(string: "https://github.com/katagaki/\(githubRepoName)")!) {
                     HStack {
                         ListRow(image: "ListIcon.GitHub",
-                                title: NSLocalizedString("More.Help.GitHub", bundle: .module, comment: ""),
+                                title: "More.Help.GitHub",
                                 subtitle: githubRepoName,
                                 includeSpacer: true,
                                 bundle: .module)
@@ -60,13 +60,14 @@ public struct MoreView<Content: View>: View {
                     .foregroundColor(.primary)
                 }
             } header: {
-                ListSectionHeader(text: NSLocalizedString("More.Help", bundle: .module, comment: ""))
+                ListSectionHeader(text: "More.Help",
+                                  bundle: .module)
                     .font(.body)
             }
             Section {
                 NavigationLink(value: attributionsViewPath) {
                     ListRow(image: "ListIcon.Attributions",
-                            title: NSLocalizedString("More.Attributions", bundle: .module, comment: ""),
+                            title: "More.Attributions",
                             bundle: .module)
                 }
             }

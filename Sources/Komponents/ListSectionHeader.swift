@@ -10,9 +10,16 @@ import SwiftUI
 public struct ListSectionHeader: View {
 
     public var text: String
+    public var bundle: Bundle
+
+    public init(text: String, bundle: Bundle) {
+        self.text = text
+        self.bundle = bundle
+    }
 
     public init(text: String) {
         self.text = text
+        self.bundle = .main
     }
 
     public var body: some View {
