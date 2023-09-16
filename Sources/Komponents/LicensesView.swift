@@ -32,6 +32,6 @@ public struct LicensesView: View {
 }
 
 public struct License {
-    var libraryName: String
-    var text: String
+    public var libraryName: String
+    public var text: String
 }
