@@ -11,9 +11,9 @@ public struct MoreView<Content: View>: View {
 
     @ViewBuilder let sections: Content
     var githubRepoName: String
-    var attributionsViewPath: AnyHashable
+    var attributionsViewPath: any Hashable
 
-    public init(repoName: String, viewPath: AnyHashable, @ViewBuilder sections: @escaping () -> Content) {
+    public init(repoName: String, viewPath: any Hashable, @ViewBuilder sections: @escaping () -> Content) {
         self.sections = sections()
         self.githubRepoName = repoName
         self.attributionsViewPath = viewPath
