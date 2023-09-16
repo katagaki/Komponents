@@ -13,6 +13,16 @@ public struct ListRow: View {
     public var title: String
     public var subtitle: String?
     public var includeSpacer: Bool
+    public var bundle: Bundle
+
+    public init(image: String, title: String, subtitle: String? = nil,
+                includeSpacer: Bool = false, bundle: Bundle) {
+        self.image = image
+        self.title = title
+        self.subtitle = subtitle
+        self.includeSpacer = includeSpacer
+        self.bundle = bundle
+    }
 
     public init(image: String, title: String, subtitle: String? = nil,
                 includeSpacer: Bool = false) {
@@ -20,17 +30,26 @@ public struct ListRow: View {
         self.title = title
         self.subtitle = subtitle
         self.includeSpacer = includeSpacer
+        self.bundle = .main
+    }
+
+    public init(image: String, title: String, bundle: Bundle) {
+        self.image = image
+        self.title = title
+        self.includeSpacer = false
+        self.bundle = bundle
     }
 
     public init(image: String, title: String) {
         self.image = image
         self.title = title
         self.includeSpacer = false
+        self.bundle = .main
     }
 
     public var body: some View {
         HStack(alignment: .center, spacing: 16.0) {
-            Image(image)
+            Image(image, bundle: bundle)
                 .resizable()
                 .frame(width: 30.0, height: 30.0)
             VStack(alignment: .leading, spacing: 2.0) {

@@ -28,7 +28,8 @@ public struct MoreView<Content: View>: View {
                         ListRow(image: "ListIcon.Twitter",
                                 title: NSLocalizedString("More.Help.Twitter", bundle: .module, comment: ""),
                                 subtitle: NSLocalizedString("More.Help.Twitter.Subtitle", bundle: .module, comment: ""),
-                                includeSpacer: true)
+                                includeSpacer: true,
+                                bundle: .module)
                         Image(systemName: "safari")
                             .opacity(0.5)
                     }
@@ -39,7 +40,8 @@ public struct MoreView<Content: View>: View {
                         ListRow(image: "ListIcon.Email",
                                 title: NSLocalizedString("More.Help.Email", bundle: .module, comment: ""),
                                 subtitle: NSLocalizedString("More.Help.Email.Subtitle", bundle: .module, comment: ""),
-                                includeSpacer: true)
+                                includeSpacer: true,
+                                bundle: .module)
                         Image(systemName: "arrow.up.forward.app")
                             .opacity(0.5)
                     }
@@ -50,20 +52,22 @@ public struct MoreView<Content: View>: View {
                         ListRow(image: "ListIcon.GitHub",
                                 title: NSLocalizedString("More.Help.GitHub", bundle: .module, comment: ""),
                                 subtitle: githubRepoName,
-                                includeSpacer: true)
+                                includeSpacer: true,
+                                bundle: .module)
                         Image(systemName: "safari")
                             .opacity(0.5)
                     }
                     .foregroundColor(.primary)
                 }
             } header: {
-                ListSectionHeader(text: "More.Help")
+                ListSectionHeader(text: NSLocalizedString("More.Help", bundle: .module, comment: ""))
                     .font(.body)
             }
             Section {
                 NavigationLink(value: attributionsViewPath) {
                     ListRow(image: "ListIcon.Attributions",
-                            title: NSLocalizedString("More.Attributions", bundle: .module, comment: ""))
+                            title: NSLocalizedString("More.Attributions", bundle: .module, comment: ""),
+                            bundle: .module)
                 }
             }
         }
