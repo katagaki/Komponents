@@ -26,10 +26,9 @@ public struct MoreView<Content: View>: View {
                 Link(destination: URL(string: "https://x.com/katagaki_")!) {
                     HStack {
                         ListRow(image: "ListIcon.Twitter",
-                                title: "More.Help.Twitter",
-                                subtitle: "More.Help.Twitter.Subtitle",
-                                includeSpacer: true,
-                                bundle: .module)
+                                title: NSLocalizedString("More.Help.Twitter", bundle: .module, comment: ""),
+                                subtitle: NSLocalizedString("More.Help.Twitter.Subtitle", bundle: .module, comment: ""),
+                                includeSpacer: true)
                         Image(systemName: "safari")
                             .opacity(0.5)
                     }
@@ -38,10 +37,9 @@ public struct MoreView<Content: View>: View {
                 Link(destination: URL(string: "mailto:ktgk.public@icloud.com")!) {
                     HStack {
                         ListRow(image: "ListIcon.Email",
-                                title: "More.Help.Email",
-                                subtitle: "More.Help.Email.Subtitle",
-                                includeSpacer: true,
-                                bundle: .module)
+                                title: NSLocalizedString("More.Help.Email", bundle: .module, comment: ""),
+                                subtitle: NSLocalizedString("More.Help.Email.Subtitle", bundle: .module, comment: ""),
+                                includeSpacer: true)
                         Image(systemName: "arrow.up.forward.app")
                             .opacity(0.5)
                     }
@@ -50,25 +48,22 @@ public struct MoreView<Content: View>: View {
                 Link(destination: URL(string: "https://github.com/katagaki/\(githubRepoName)")!) {
                     HStack {
                         ListRow(image: "ListIcon.GitHub",
-                                title: "More.Help.GitHub",
+                                title: NSLocalizedString("More.Help.GitHub", bundle: .module, comment: ""),
                                 subtitle: githubRepoName,
-                                includeSpacer: true,
-                                bundle: .module)
+                                includeSpacer: true)
                         Image(systemName: "safari")
                             .opacity(0.5)
                     }
                     .foregroundColor(.primary)
                 }
             } header: {
-                ListSectionHeader(text: "More.Help",
-                                  bundle: .module)
+                ListSectionHeader(text: "More.Help")
                     .font(.body)
             }
             Section {
                 NavigationLink(value: attributionsViewPath) {
                     ListRow(image: "ListIcon.Attributions",
-                            title: "More.Attributions",
-                            bundle: .module)
+                            title: NSLocalizedString("More.Attributions", bundle: .module, comment: ""))
                 }
             }
         }
