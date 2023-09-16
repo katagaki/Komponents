@@ -27,7 +27,7 @@ public struct LicensesView: View {
     }
 }
 
-struct License {
+public struct License {
     var libraryName: String
     var text: String
 }

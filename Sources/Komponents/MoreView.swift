@@ -9,9 +9,15 @@ import SwiftUI
 
 public struct MoreView<Content: View>: View {
 
-    @ViewBuilder public let sections: Content
-    @State public var githubRepoName: String
-    @State public var attributionsViewPath: AnyHashable
+    @ViewBuilder let sections: Content
+    @State var githubRepoName: String?
+    @State var attributionsViewPath: AnyHashable?
+
+    public init(repoName: String, viewPath: AnyHashable, @ViewBuilder sections: @escaping () -> Content) {
+        self.sections = sections()
+        self.githubRepoName = repoName
+        self.attributionsViewPath = viewPath
+    }
 
     public var body: some View {
         List {
@@ -39,10 +45,10 @@ public struct MoreView<Content: View>: View {
                     }
                     .foregroundColor(.primary)
                 }
-                Link(destination: URL(string: "https://github.com/katagaki/\(githubRepoName)")!) {
+                Link(destination: URL(string: "https://github.com/katagaki/\(githubRepoName ?? "")")!) {
                     HStack {
                         ListRow(image: "ListIcon.GitHub",
-                                title: "More.Help.GitHub".replacingOccurrences(of: "%@", with: githubRepoName),
+                                title: "More.Help.GitHub".replacingOccurrences(of: "%@", with: githubRepoName ?? ""),
                                 subtitle: "More.Help.GitHub.Subtitle",
                                 includeSpacer: true)
                         Image(systemName: "safari")
