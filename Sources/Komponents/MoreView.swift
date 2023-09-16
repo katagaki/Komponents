@@ -28,7 +28,8 @@ public struct MoreView<Content: View>: View {
                         ListRow(image: "ListIcon.Twitter",
                                 title: "More.Help.Twitter",
                                 subtitle: "More.Help.Twitter.Subtitle",
-                                includeSpacer: true)
+                                includeSpacer: true,
+                                bundle: .module)
                         Image(systemName: "safari")
                             .opacity(0.5)
                     }
@@ -39,7 +40,8 @@ public struct MoreView<Content: View>: View {
                         ListRow(image: "ListIcon.Email",
                                 title: "More.Help.Email",
                                 subtitle: "More.Help.Email.Subtitle",
-                                includeSpacer: true)
+                                includeSpacer: true,
+                                bundle: .module)
                         Image(systemName: "arrow.up.forward.app")
                             .opacity(0.5)
                     }
@@ -50,7 +52,8 @@ public struct MoreView<Content: View>: View {
                         ListRow(image: "ListIcon.GitHub",
                                 title: "More.Help.GitHub",
                                 subtitle: "More.Help.GitHub.Subtitle".replacingOccurrences(of: "%@", with: githubRepoName ?? ""),
-                                includeSpacer: true)
+                                includeSpacer: true,
+                                bundle: .module)
                         Image(systemName: "safari")
                             .opacity(0.5)
                     }
@@ -63,7 +66,8 @@ public struct MoreView<Content: View>: View {
             Section {
                 NavigationLink(value: attributionsViewPath) {
                     ListRow(image: "ListIcon.Attributions",
-                            title: "More.Attributions")
+                            title: "More.Attributions",
+                            bundle: .module)
                 }
             }
         }
