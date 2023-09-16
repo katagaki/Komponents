@@ -73,6 +73,6 @@ public struct MoreView<Content: View>: View {
             }
         }
         .listStyle(.insetGrouped)
-        .navigationTitle("ViewTitle.More")
+        .navigationTitle(NSLocalizedString("ViewTitle.More", bundle: .module, comment: ""))
     }
 }

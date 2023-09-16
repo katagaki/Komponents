@@ -27,7 +27,7 @@ public struct LicensesView: View {
             }
         }
         .listStyle(.grouped)
-        .navigationTitle("ViewTitle.Attributions")
+        .navigationTitle(NSLocalizedString("ViewTitle.Attributions", bundle: .module, comment: ""))
     }
 }
 
