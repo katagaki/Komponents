@@ -9,8 +9,8 @@ import SwiftUI
 
 public struct LargeButtonLabel: View {
 
-    @State public var iconName: String?
-    @State public var text: String
+    public var iconName: String?
+    public var text: String
 
     public init(iconName: String? = nil, text: String) {
         self.iconName = iconName
