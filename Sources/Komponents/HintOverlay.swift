@@ -8,8 +8,8 @@
 import SwiftUI
 
 public struct HintOverlay: View {
-    var image: String
-    var text: String
+    public var image: String
+    public var text: String
 
     public var body: some View {
         VStack(alignment: .center, spacing: 8.0) {

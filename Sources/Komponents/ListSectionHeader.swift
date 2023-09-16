@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct ListSectionHeader: View {
-    var text: String
+    public var text: String
 
     public var body: some View {
         Text(NSLocalizedString(text, comment: ""))

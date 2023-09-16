@@ -9,8 +9,8 @@ import SwiftUI
 
 public struct LargeButtonLabel: View {
 
-    @State var iconName: String?
-    @State var text: String
+    @State public var iconName: String?
+    @State public var text: String
 
     public var body: some View {
         HStack(alignment: .center, spacing: 4.0) {

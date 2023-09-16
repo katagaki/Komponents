@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct LicensesView: View {
 
-    @State var licenses: [License]
+    @State public var licenses: [License]
 
     public var body: some View {
         List(licenses, id: \.libraryName) { license in

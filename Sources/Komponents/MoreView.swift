@@ -9,9 +9,9 @@ import SwiftUI
 
 public struct MoreView<Content: View>: View {
 
-    @ViewBuilder let sections: Content
-    @State var githubRepoName: String
-    @State var attributionsViewPath: AnyHashable
+    @ViewBuilder public let sections: Content
+    @State public var githubRepoName: String
+    @State public var attributionsViewPath: AnyHashable
 
     public var body: some View {
         List {

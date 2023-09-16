@@ -8,10 +8,10 @@
 import SwiftUI
 
 public struct ActionButton: View {
-    var text: String
-    var icon: String
-    var isPrimary: Bool = false
-    var action: () -> Void
+    public var text: String
+    public var icon: String
+    public var isPrimary: Bool = false
+    public var action: () -> Void
     public var body: some View {
         if isPrimary {
             Button {
