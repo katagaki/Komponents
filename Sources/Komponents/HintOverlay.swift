@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct HintOverlay: View {
+public struct HintOverlay: View {
     var image: String
     var text: String
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .center, spacing: 8.0) {
             Image(systemName: image)
                 .symbolRenderingMode(.multicolor)

@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct LargeButtonLabel: View {
+public struct LargeButtonLabel: View {
 
     @State var iconName: String?
     @State var text: String
 
-    var body: some View {
+    public var body: some View {
         HStack(alignment: .center, spacing: 4.0) {
             if let iconName = iconName {
                 Image(systemName: iconName)

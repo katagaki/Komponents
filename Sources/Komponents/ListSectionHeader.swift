@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ListSectionHeader: View {
+public struct ListSectionHeader: View {
     var text: String
 
-    var body: some View {
+    public var body: some View {
         Text(NSLocalizedString(text, comment: ""))
             .fontWeight(.bold)
             .foregroundColor(.primary)

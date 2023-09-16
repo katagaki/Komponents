@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct MoreView: View {
+public struct MoreView: View {
 
     @State var sections: AnyView
     @State var githubRepoName: String
     @State var attributionsViewPath: AnyHashable
 
-    var body: some View {
+    public var body: some View {
         List {
             sections
             Section {

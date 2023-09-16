@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct LicensesView: View {
+public struct LicensesView: View {
 
     @State var licenses: [License]
 
-    var body: some View {
+    public var body: some View {
         List(licenses, id: \.libraryName) { license in
             Section {
                 Text(license.text)

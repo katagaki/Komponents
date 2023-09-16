@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ListRow: View {
+public struct ListRow: View {
     var image: String
     var title: String
     var subtitle: String?
     var includeSpacer: Bool = false
 
-    var body: some View {
+    public var body: some View {
         HStack(alignment: .center, spacing: 16.0) {
             Image(image)
                 .resizable()

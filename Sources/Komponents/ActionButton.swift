@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ActionButton: View {
+public struct ActionButton: View {
     var text: String
     var icon: String
     var isPrimary: Bool = false
     var action: () -> Void
-    var body: some View {
+    public var body: some View {
         if isPrimary {
             Button {
                 action()
