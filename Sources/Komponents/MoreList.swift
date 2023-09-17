@@ -11,7 +11,14 @@ public struct MoreList<Content: View>: View {
 
     @ViewBuilder let sections: Content
     var githubRepoName: String
-    var attributionsViewPath: any Hashable
+    var attributionsViewPath: (any Hashable)?
+
+    @State var showsAttributions: Bool = false
+
+    public init(repoName: String, @ViewBuilder sections: @escaping () -> Content) {
+        self.sections = sections()
+        self.githubRepoName = repoName
+    }
 
     public init(repoName: String, viewPath: any Hashable, @ViewBuilder sections: @escaping () -> Content) {
         self.sections = sections()
@@ -64,11 +71,13 @@ public struct MoreList<Content: View>: View {
                                   bundle: .module)
                     .font(.body)
             }
-            Section {
-                NavigationLink(value: attributionsViewPath) {
-                    ListRow(image: "ListIcon.Attributions",
-                            title: "More.Attributions",
-                            bundle: .module)
+            if let attributionsViewPath = attributionsViewPath {
+                Section {
+                    NavigationLink(value: attributionsViewPath) {
+                        ListRow(image: "ListIcon.Attributions",
+                                title: "More.Attributions",
+                                bundle: .module)
+                    }
                 }
             }
         }
