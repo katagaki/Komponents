@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "icons8-mail (Light).pdf",
+      "filename" : "UI Icons.001.png",
       "idiom" : "universal"
     },
     {
@@ -11,8 +11,22 @@
           "value" : "dark"
         }
       ],
-      "filename" : "icons8-mail (Dark).pdf",
+      "filename" : "UI Icons.002.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "NS Icons.001.png",
+      "idiom" : "mac"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "NS Icons.002.png",
+      "idiom" : "mac"
     }
   ],
   "info" : {
