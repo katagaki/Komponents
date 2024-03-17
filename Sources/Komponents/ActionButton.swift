@@ -27,10 +27,17 @@ public struct ActionButton: View {
                 action()
             } label: {
                 HStack(alignment: .center, spacing: 4.0) {
-                    Image(icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 18.0, height: 18.0)
+                    if UIImage(named: icon) != nil {
+                        Image(icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 18.0, height: 18.0)
+                    } else {
+                        Image(systemName: icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 18.0, height: 18.0)
+                    }
                     Text(NSLocalizedString(text, comment: ""))
                         .bold()
                 }
@@ -44,10 +51,17 @@ public struct ActionButton: View {
                 action()
             } label: {
                 HStack(alignment: .center, spacing: 4.0) {
-                    Image(icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 18.0, height: 18.0)
+                    if UIImage(named: icon) != nil {
+                        Image(icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 18.0, height: 18.0)
+                    } else {
+                        Image(systemName: icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 18.0, height: 18.0)
+                    }
                     Text(NSLocalizedString(text, comment: ""))
                         .bold()
                 }
