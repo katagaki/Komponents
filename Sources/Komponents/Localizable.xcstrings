@@ -15,6 +15,12 @@
             "state" : "translated",
             "value" : "著者権表記"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atribuições"
+          }
         }
       }
     },
@@ -31,6 +37,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "サポート"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajuda e suporte"
           }
         }
       }
@@ -49,6 +61,12 @@
             "state" : "translated",
             "value" : "メールを送信"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Me mande um e-mail"
+          }
         }
       }
     },
@@ -64,7 +82,13 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ktgk.public@icloud.com"
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         }
       }
@@ -83,6 +107,12 @@
             "state" : "translated",
             "value" : "ソースコードを閲覧"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leia o código-fonte"
+          }
         }
       }
     },
@@ -100,6 +130,12 @@
             "state" : "translated",
             "value" : "Xでポスト"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Postar no X"
+          }
         }
       }
     },
@@ -115,7 +151,13 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "@katagaki_"
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         }
       }
@@ -134,6 +176,12 @@
             "state" : "translated",
             "value" : "著者権表記"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atribuições"
+          }
         }
       }
     },
@@ -150,6 +198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "その他"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mais"
           }
         }
       }
