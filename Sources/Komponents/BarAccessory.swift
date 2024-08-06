@@ -12,9 +12,9 @@ public struct BarAccessory<Content: View>: View {
     public var placement: Placement
     @ViewBuilder public let content: Content
 
-    public init(placement: Placement, content: Content) {
+    public init(placement: Placement, content: @escaping () -> Content) {
         self.placement = placement
-        self.content = content
+        self.content = content()
     }
 
     public var body: some View {
