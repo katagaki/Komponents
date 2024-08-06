@@ -24,6 +24,7 @@ public struct ListSectionHeader: View {
 
     public var body: some View {
         Text(LocalizedStringKey(text), bundle: bundle)
+            .font(.body)
             .fontWeight(.bold)
             .foregroundColor(.primary)
             .textCase(nil)
