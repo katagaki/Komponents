@@ -11,22 +11,19 @@ public struct BarAccessoryButton: View {
 
     public var icon: String?
     public var text: LocalizedStringKey
+    public var accentColor: Color?
     public var action: () -> Void
     public var isSecondary: Bool = false
     public var isTextLight: Bool = true
 
-    public init(_ text: LocalizedStringKey, icon: String? = nil, isTextLight: Bool, action: @escaping () -> Void) {
+    public init(_ text: LocalizedStringKey, icon: String? = nil, accentColor: Color? = nil,
+                isTextLight: Bool = true, isSecondary: Bool = false, action: @escaping () -> Void) {
         self.icon = icon
         self.text = text
+        self.accentColor = accentColor
         self.isTextLight = isTextLight
-        self.action = action
-    }
-
-    public init(_ text: LocalizedStringKey, icon: String? = nil, isSecondary: Bool, action: @escaping () -> Void) {
-        self.icon = icon
-        self.text = text
-        self.action = action
         self.isSecondary = isSecondary
+        self.action = action
     }
 
     public var body: some View {
@@ -48,7 +45,7 @@ public struct BarAccessoryButton: View {
                     .foregroundStyle((isTextLight ? Color.white : Color.black))
                     .padding([.top, .bottom], 12.0)
                     .padding([.leading, .trailing], 16.0)
-                    .background(Color.accentColor)
+                    .background(accentColor == nil ? Color.accentColor : accentColor)
                 }
             } else {
                 Button {
