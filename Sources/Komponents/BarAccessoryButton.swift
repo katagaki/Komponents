@@ -9,20 +9,20 @@ import SwiftUI
 
 public struct BarAccessoryButton: View {
 
-    public var icon: String
+    public var icon: String?
     public var text: LocalizedStringKey
     public var action: () -> Void
     public var isSecondary: Bool = false
     public var isTextLight: Bool = true
 
-    public init(_ text: LocalizedStringKey, icon: String, isTextLight: Bool, action: @escaping () -> Void) {
+    public init(_ text: LocalizedStringKey, icon: String? = nil, isTextLight: Bool, action: @escaping () -> Void) {
         self.icon = icon
         self.text = text
         self.isTextLight = isTextLight
         self.action = action
     }
 
-    public init(_ text: LocalizedStringKey, icon: String, isSecondary: Bool, action: @escaping () -> Void) {
+    public init(_ text: LocalizedStringKey, icon: String? = nil, isSecondary: Bool, action: @escaping () -> Void) {
         self.icon = icon
         self.text = text
         self.action = action
@@ -36,10 +36,12 @@ public struct BarAccessoryButton: View {
                     action()
                 } label: {
                     HStack(spacing: 8.0) {
-                        Image(systemName: icon)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 18.0, height: 18.0)
+                        if let icon {
+                            Image(systemName: icon)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 18.0, height: 18.0)
+                        }
                         Text(text)
                             .fontWeight(.medium)
                     }
@@ -53,10 +55,12 @@ public struct BarAccessoryButton: View {
                     action()
                 } label: {
                     HStack(spacing: 8.0) {
-                        Image(systemName: icon)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 18.0, height: 18.0)
+                        if let icon {
+                            Image(systemName: icon)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 18.0, height: 18.0)
+                        }
                         Text(text)
                             .fontWeight(.medium)
                     }
