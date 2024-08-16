@@ -39,8 +39,8 @@ public struct BarAccessoryPicker<Content: View, T: Hashable>: View {
             .padding([.top, .bottom], 12.0)
             .padding([.leading, .trailing], 16.0)
             .background(Color.accentColor)
+            .clipShape(.capsule)
         }
-        .buttonStyle(.plain)
-        .clipShape(.capsule)
+        .pickerStyle(.menu)
     }
 }
