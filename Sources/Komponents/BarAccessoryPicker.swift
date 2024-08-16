@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-public struct BarAccessoryPicker<Content: View>: View {
+public struct BarAccessoryPicker<Content: View, T: Hashable>: View {
 
     @ViewBuilder let pickerItems: Content
     public var icon: String?
     public var text: LocalizedStringKey
-    public var selection: Binding<AnyHashable>
+    public var selection: Binding<T>
 
-    public init(_ text: LocalizedStringKey, icon: String? = nil, selection: Binding<AnyHashable>, @ViewBuilder pickerItems: @escaping () -> Content) {
+    public init(_ text: LocalizedStringKey, icon: String? = nil, selection: Binding<T>, @ViewBuilder pickerItems: @escaping () -> Content) {
         self.pickerItems = pickerItems()
         self.icon = icon
         self.text = text
