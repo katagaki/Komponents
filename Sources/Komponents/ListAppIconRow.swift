@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListAppIconRow: View {
+public struct ListAppIconRow: View {
     public var image: String
     public var text: String
     public var iconToSet: String?
