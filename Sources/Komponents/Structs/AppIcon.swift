@@ -8,13 +8,11 @@
 import Foundation
 
 public struct AppIcon {
-    public var previewImageName: String
     public var name: String
-    public var iconName: String?
+    public var imageName: String?
 
-    public init(previewImageName: String, name: String, iconName: String? = nil) {
-        self.previewImageName = previewImageName
+    public init(_ name: String, imageName: String? = nil) {
         self.name = name
-        self.iconName = iconName
+        self.imageName = imageName
     }
 }

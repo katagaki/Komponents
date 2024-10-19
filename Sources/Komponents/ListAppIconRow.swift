@@ -8,19 +8,15 @@
 import SwiftUI
 
 public struct ListAppIconRow: View {
-    public var image: String
-    public var text: String
-    public var iconToSet: String?
+    public var icon: AppIcon
 
-    public init(image: String, text: String, iconToSet: String? = nil) {
-        self.image = image
-        self.text = text
-        self.iconToSet = iconToSet
+    public init(_ icon: AppIcon) {
+        self.icon = icon
     }
 
     public var body: some View {
         HStack(alignment: .center, spacing: 16.0) {
-            Image(image)
+            Image(icon.imageName ?? "AppIcon")
                 .resizable()
                 .frame(width: 60.0, height: 60.0)
                 .clipped(antialiased: true)
@@ -31,7 +27,7 @@ public struct ListAppIconRow: View {
                     RoundedRectangle(cornerRadius: 14.0)
                         .stroke(.thickMaterial, lineWidth: 1.0)
                 }
-            Text(NSLocalizedString(text, comment: ""))
+            Text(NSLocalizedString(icon.name, comment: ""))
             Spacer()
         }
         .contentShape(Rectangle())
