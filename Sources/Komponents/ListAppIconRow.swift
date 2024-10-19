@@ -27,7 +27,7 @@ public struct ListAppIconRow: View {
                     RoundedRectangle(cornerRadius: 14.0)
                         .stroke(.thickMaterial, lineWidth: 1.0)
                 }
-            Text(NSLocalizedString(icon.name, comment: ""))
+            Text(NSLocalizedString(icon.name, bundle: .main, comment: ""))
             Spacer()
         }
         .contentShape(Rectangle())
