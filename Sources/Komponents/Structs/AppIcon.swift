@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AppIcon {
+public struct AppIcon: Hashable {
     public var name: String
     public var imageName: String?
 
