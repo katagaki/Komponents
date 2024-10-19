@@ -30,13 +30,3 @@ public struct LicensesView: View {
         .navigationTitle(NSLocalizedString("ViewTitle.Attributions", bundle: .module, comment: ""))
     }
 }
-
-public struct License {
-    public var libraryName: String
-    public var text: String
-
-    public init(libraryName: String, text: String) {
-        self.libraryName = libraryName
-        self.text = text
-    }
-}

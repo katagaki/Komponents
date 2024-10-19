@@ -1,6 +1,6 @@
 //
 //  MoreList.swift
-//
+//  Komponents
 //
 //  Created by シン・ジャスティン on 2023/09/16.
 //
