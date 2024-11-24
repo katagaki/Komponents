@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProgressAlertModifier: ViewModifier {
+public struct ProgressAlertModifier: ViewModifier {
     
     @Binding var isModal: Bool
     @Binding var isShowing: Bool
@@ -18,7 +18,7 @@ struct ProgressAlertModifier: ViewModifier {
 
     @Namespace var progressAlertNamespace
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .overlay {
                 if isShowing {
@@ -41,8 +41,8 @@ struct ProgressAlertModifier: ViewModifier {
     }
 }
 
-public extension View {
-    func progressAlert(
+extension View {
+    public func progressAlert(
         isModal: Binding<Bool>,
         isShowing: Binding<Bool>,
         headerText: Binding<String?> = .constant(""),
