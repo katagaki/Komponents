@@ -18,6 +18,20 @@ public struct ProgressAlertModifier: ViewModifier {
 
     @Namespace var progressAlertNamespace
 
+    public init(
+        isModal: Binding<Bool>,
+        isShowing: Binding<Bool>,
+        headerText: Binding<String?> = .constant(""),
+        bodyText: Binding<String?> = .constant(""),
+        progress: Binding<Double?> = .constant(.zero)
+    ) {
+        self._isModal = isModal
+        self._isShowing = isShowing
+        self._headerText = headerText
+        self._bodyText = bodyText
+        self._progress = progress
+    }
+
     public func body(content: Content) -> some View {
         content
             .overlay {

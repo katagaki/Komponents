@@ -7,13 +7,24 @@
 
 import SwiftUI
 
-struct LoadingOverlay: View {
+public struct LoadingOverlay: View {
     var namespace: Namespace.ID
     @Binding var headerText: String?
     @Binding var bodyText: String?
     @Binding var progress: Double?
 
-    var body: some View {
+    public init(
+        namespace: Namespace.ID,
+        headerText: Binding<String?>,
+        bodyText: Binding<String?>,
+        progress: Binding<Double?>) {
+        self.namespace = namespace
+        self._headerText = headerText
+        self._bodyText = bodyText
+        self._progress = progress
+    }
+
+    public var body: some View {
         ZStack {
             Color.black.opacity(0.7)
             VStack(spacing: 12.0) {

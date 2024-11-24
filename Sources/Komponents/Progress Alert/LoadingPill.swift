@@ -7,12 +7,21 @@
 
 import SwiftUI
 
-struct LoadingPill: View {
+public struct LoadingPill: View {
     var namespace: Namespace.ID
     @Binding var headerText: String?
     @Binding var bodyText: String?
 
-    var body: some View {
+    public init(
+        namespace: Namespace.ID,
+        headerText: Binding<String?>,
+        bodyText: Binding<String?>) {
+        self.namespace = namespace
+        self._headerText = headerText
+        self._bodyText = bodyText
+    }
+
+    public var body: some View {
         ZStack(alignment: .top) {
             Color.clear
             HStack(spacing: 4.0) {
