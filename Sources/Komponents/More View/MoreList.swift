@@ -33,7 +33,7 @@ public struct MoreList<Content: View>: View {
                 Link(destination: URL(string: "https://github.com/\(githubRepoName)")!) {
                     HStack {
                         ListRow(image: "ListIcon.GitHub",
-                                title: "More.Help.GitHub",
+                                title: "More.GitHub",
                                 subtitle: githubRepoName,
                                 includeSpacer: true,
                                 bundle: .module)
