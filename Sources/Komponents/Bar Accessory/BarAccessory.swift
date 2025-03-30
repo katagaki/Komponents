@@ -10,10 +10,12 @@ import SwiftUI
 public struct BarAccessory<Content: View>: View {
 
     public var placement: Placement
+    private var isBackgroundSolid: Bool
     @ViewBuilder public let content: Content
 
-    public init(placement: Placement, content: @escaping () -> Content) {
+    public init(placement: Placement, isBackgroundSolid: Bool = false, content: @escaping () -> Content) {
         self.placement = placement
+        self.isBackgroundSolid = isBackgroundSolid
         self.content = content()
     }
 
@@ -22,6 +24,7 @@ public struct BarAccessory<Content: View>: View {
         case .top:
             content
                 .frame(maxWidth: .infinity)
+                .modifier(ConditionalBackground(isSolid: self.isBackgroundSolid))
                 .background(Material.bar)
                 .overlay(alignment: .bottom) {
                     Rectangle()
@@ -32,7 +35,7 @@ public struct BarAccessory<Content: View>: View {
         case .bottom:
             content
                 .frame(maxWidth: .infinity)
-                .background(Material.bar)
+                .modifier(ConditionalBackground(isSolid: self.isBackgroundSolid))
                 .overlay(alignment: .top) {
                     Rectangle()
                         .frame(height: 1/3)
@@ -45,5 +48,18 @@ public struct BarAccessory<Content: View>: View {
     public enum Placement {
         case top
         case bottom
+    }
+
+}
+
+fileprivate struct ConditionalBackground: ViewModifier {
+    var isSolid: Bool = false
+    func body(content: Content) -> some View {
+        if isSolid {
+            content
+        } else {
+            content
+                .background(Material.bar)
+        }
     }
 }
