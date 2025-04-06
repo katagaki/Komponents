@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if os(iOS)
 public struct ActionButton: View {
 
     public var text: String
@@ -73,3 +74,4 @@ public struct ActionButton: View {
         }
     }
 }
+#endif

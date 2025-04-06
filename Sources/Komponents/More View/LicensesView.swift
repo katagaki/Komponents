@@ -26,7 +26,9 @@ public struct LicensesView: View {
                     .font(.body)
             }
         }
+        #if os(iOS)
         .listStyle(.grouped)
+        #endif
         .navigationTitle(NSLocalizedString("ViewTitle.Attributions", bundle: .module, comment: ""))
     }
 }

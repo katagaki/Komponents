@@ -46,11 +46,19 @@ public struct LoadingPill: View {
             }
             .padding(.vertical, 4.0)
             .padding(.horizontal, 8.0)
+            #if os(iOS)
             .background(Color(uiColor: .secondarySystemBackground))
+            #else
+            .background(Color(nsColor: .windowBackgroundColor))
+            #endif
             .clipShape(.capsule(style: .continuous))
             .matchedGeometryEffect(id: "LoadingWindow", in: namespace)
             .padding(.horizontal, 8.0)
+            #if os(iOS)
             .padding(.top, UIDevice.current.userInterfaceIdiom != .pad ? 8.0 : 64.0)
+            #else
+            .padding(.top, 8.0)
+            #endif
             .shadow(radius: 3.0, y: 3.0)
         }
         .transition(.move(edge: .top).animation(.smooth.speed(2.0)))

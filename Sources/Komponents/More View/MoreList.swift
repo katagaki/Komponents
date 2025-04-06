@@ -51,7 +51,9 @@ public struct MoreList<Content: View>: View {
                 }
             }
         }
+        #if os(iOS)
         .listStyle(.insetGrouped)
+        #endif
         .navigationTitle(NSLocalizedString("ViewTitle.More", bundle: .module, comment: ""))
     }
 }
