@@ -54,8 +54,7 @@ public struct LoadingOverlay: View {
             }
             .padding()
             .frame(maxWidth: 350.0)
-            .background(Material.regular)
-            .clipShape(RoundedRectangle(cornerRadius: 16.0))
+            .loadingOverlayGlass()
             .matchedGeometryEffect(id: "LoadingWindow", in: namespace)
             .padding(32.0)
         }
